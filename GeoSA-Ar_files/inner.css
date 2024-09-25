@@ -1,0 +1,362 @@
+.inner-page-title {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+	padding-bottom: 60px !important;
+	padding-top: 170px;
+	background-image: url(./headerBg02.png);
+}
+.media-page-title {
+	background-image: url(../assets/imgs/headerBg.png);
+}
+.inner-page-title .page-inner-info .inner-content .inner-page-actions ul li button{
+	min-width: 11px;
+    padding: 0px;
+    vertical-align: unset !important;
+	width:20px;
+}
+.page-inner-info .inner-content header.header-icon h2{
+	font-family: var(--arabic-font) !important;
+	margin-left: unset;
+    margin-right: unset;
+}
+.page-inner-info .inner-content header.header-icon div{
+	max-width: 837px;
+    font-size: 18px;
+    margin: 20px 0;
+	line-height:35px;
+}
+.inner-page-img img{
+	width:100% !important;
+	border-radius:10px;
+}
+.inner-page-img .intro-sec{
+	background: #042352;
+    color: #fff;
+    margin-top: -50px;
+}
+.inner-page-img .intro-sec .intro-info div.ms-rtestate-field {
+	font-size: 18px;
+    padding: 20px;
+	display: block !important;
+	line-height:35px;
+}
+.geosptial-info .general-card .icon{
+	background: #3da3c1;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    height: 100px;
+}
+body{
+	background-image: url(../assets/imgs/org-bg.jpg);
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+#s4-bodyContainer{
+    background-image: url('/style library/geosa/newdesign24/assets/imgs/org-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+.geosptial-info .content .general-card .icon{
+	background: #f4f7f9;
+}
+/* Start Terms and conditions Content */
+.geosptial-info {
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.geosptial-info .content .page-img-title {
+    margin-top: -95px;
+}
+
+.geosptial-info .content .page-img-title img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.top-chart {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+
+.top-chart::after {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.geosptial-info .content .card-content {
+    height: 100%;
+    background: #f4f7f9;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.geosptial-info .content .card-content::after {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 139.4px;
+    height: 11.7px;
+    transform: translate(-50%, -50%);
+}
+
+.geosptial-info .content .terms-cards {
+    margin-bottom: 200px;
+}
+
+.geosptial-info .content .card-content img {
+    max-height: 80px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.geosptial-info .content .card-content h5 {
+    color: #3ea3c1;
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.geosptial-info .content .card-content button {
+    min-width: 134.7px;
+    min-height: 49.5px;
+    max-width: fit-content;
+    margin: 0 auto;
+    background: #3ea3c1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+/* End Terms and conditions Content */
+/* Start Media Center Page */
+.media-content .media-info {
+    margin: 100px auto;
+    max-width: 1148px;
+}
+.media-content .media-info header h3 {
+    margin-bottom: 95px;
+    color: #3EA3C1;
+    font-size: 40px;
+    text-align: center;
+    line-height: 63px;
+    font-weight: 600;
+    position: relative;
+}
+
+/*.media-content .media-info header h3::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    transform: translate(-50%, -50%);
+}*/
+
+.media-content .media-info article p {
+    color: #727272;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.media-content .news-update {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #F0F4F8;
+    padding: 24px 50px;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
+.media-content .news-update span {
+    display: inline-flex;
+    min-width: 135px;
+    min-height: 49px;
+    background: #3EA3C1;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.media-content .news-update p {
+    color: #002228;
+    font-size: 20px;
+}
+
+.media-content .news-update p img {
+    width: 26px;
+    margin-inline-end: 8px;
+}
+
+.media-center-section article .media-card h4 {
+    padding-top: 20px;
+}
+
+.media-center-section article .media-card .media-info {
+    margin: 0;
+    margin-top: 14px;
+    max-width: 100%;
+}
+
+.media-center-section article .rating-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.media-center-section article .rating-social svg {
+    color: #808080;
+}
+
+.media-center-section article .rating-social .socail {
+    margin: 10px 0;
+}
+
+.media-center-section article .rating-social .socail button {
+    min-width: 88px;
+    min-height: 34px;
+    background-color: #3DA3C1;
+    font-size: 14px;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+}
+
+
+.media-content .media-center-section header .search-input {
+    position: relative;
+}
+
+.media-content .media-center-section header .search-input img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.media-content .media-center-section header .search-input input {
+    background: #F0F4F8;
+    padding-inline-start: 35px;
+	padding: .375rem .75rem !important;
+	border: var(--bs-border-width) solid var(--bs-border-color) !important;
+}
+.media-content .media-info header h3 {
+    margin-bottom: 95px;
+    color: #3EA3C1;
+    font-size: 40px;
+    text-align: center;
+    line-height: 63px;
+    font-weight: 600;
+    position: relative;
+	font-family: var(--arabic-font) !important;
+}
+.media-center-section header h2{
+	font-family: var(--arabic-font) !important;
+}
+.media-center-section header .media-filter ul li button.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+.media-content .media-center-section header .search-input img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.media-content .media-center-section header .search-input img {
+    left: unset;
+    right: 10px;
+}
+.national-geospatial-card .geospatial-perpose ul{
+	padding-inline-start: 20px;
+}
+.national-geospatial-card .geospatial-perpose ul li::before{
+	left: unset;
+    right: -20px;
+}
+.national-geospatial-card .geospatial-perpose ul li::before{
+	content: "";
+    position: absolute;
+    left: -20px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--paragraph-color);
+    border-radius: 50%;
+    top: 50%;
+}
+.national-geospatial-card .general-card ul li p{
+	margin:0px;
+}
+.national-geospatial-card .national-geospatial-services .col-12:not(:last-child),
+.national-geospatial-card .national-geospatial-benefits .col-12:not(:last-child),
+.national-geospatial-card .national-geospatial-layers .col-12:not(:last-child) {
+    border-inline-end: 1px solid #3ea3c1;
+}
+.national-geospatial-card .national-geospatial-benefits .benefit .benefit-number{
+	min-width: 136px;
+    min-height: 168.2px;
+    background-color: var(--main-color);
+    font-size: 54px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 27px;
+}
+.organization-page{
+	padding-top:1px;
+}
+.establishment-page .inner-page-img img{
+	width:unset !important;
+}
+/* End Media Center Page */
+
+/***************************** Farooq CSS Fixes ***************************/
+.overlay-image img{
+	width:100%;
+}
+.overlay-intro-greenish{
+	position: absolute;
+    height: 100%;
+    margin: 0px 12px 0px 0px !important;
+    background-image: linear-gradient(to left, #357a7f, #357a7ff0, #00407e8f, #00407e52, #00407e00);
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: center;
+}
+.overlay-intro-greenish p{
+	color: #fff;
+    width: 36%;
+    margin-right: 20px;
+}
+.national-content .card-content{
+	font-size:18px;
+	color:#727272;
+}

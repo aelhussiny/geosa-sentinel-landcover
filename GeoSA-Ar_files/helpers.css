@@ -1,0 +1,965 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: #3da3c1;
+    --paragraph-color: #727272;
+    --arabic-font: "Readex Pro", sans-serif;
+    --english-font: "Montserrat", sans-serif;
+    --paragraph-main-color: #002228;
+    --section-background: #F5F7FA;
+    --border-color: #707070;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    font-family: var(--english-font);
+    overflow-x: hidden;
+}
+
+body.bright {
+    filter: grayscale(1);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: unset;
+}
+
+.form-check-input:checked {
+    background-color: #3da3c1 !important;
+}
+
+.form-check-input[type=checkbox] {
+    transform: scale(1.3);
+    float: unset;
+    background-color: #d5d5d5;
+    border-radius: 0;
+}
+
+.form-check-input:checked {
+    border: unset;
+}
+
+/* Start Header Section */
+.header-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding-top: 40px;
+    text-align: end;
+}
+
+/* Start Header Action Btns */
+.header-section header button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    margin-inline-end: 10px;
+}
+
+.header-section header button:last-child {
+    margin-inline-end: 0px;
+	font-size:14px;
+}
+
+.header-section header button img {
+    transform: scale(1.4);
+    filter: brightness(0) invert(1);
+	width:70%;
+}
+
+/* End Header Action Btns */
+
+/* Start Navbar Section */
+.header-section .navbar-brand img {
+    max-width: 178px;
+}
+
+.header-section .navbar-toggler {
+    filter: brightness(0) invert(1);
+}
+
+.header-section .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.header-section .nav-item {
+    text-align: start;
+	margin: 0px 30px;
+}
+
+.header-section .nav-item .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.header-section form .search-input {
+    position: relative;
+    margin-inline-end: 12px;
+}
+
+.header-section form .search-input input {
+    background: transparent;
+    border-radius: 6px;
+    width: 190px;
+    height: 37px;
+    color: #fff;
+    padding-inline-start: 35px;
+    border: solid 2px #fff;
+}
+
+.header-section form .search-input input:focus {
+    box-shadow: none;
+}
+
+.header-section form .search-input ::placeholder {
+    color: #c4c4c4;
+}
+
+.header-section form .search-input img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.header-section form button {
+    min-width: 123px;
+    min-height: 37px;
+    font-size: 15px;
+    background: transparent;
+    color: #fff;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    transition: all .3s;
+}
+
+.header-section form button:hover {
+    background: var(--main-color);
+    border-color: var(--main-color);
+}
+
+/* End Navbar Section */
+
+/* End Header Section */
+
+/* Start Inner Page Title */
+.inner-page-title {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 230px;
+}
+
+.inner-page-title .header-section {
+    position: static;
+    padding-bottom: 120px;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-title {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-breadcrumb ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-breadcrumb ul li {
+    font-size: 17px;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-breadcrumb ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding-inline-end: 55px;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-breadcrumb ul li a::after {
+    content: '';
+    position: absolute;
+    top: -4%;
+    right: 25px;
+    background-image: url('../assets/icons/next.png');
+    width: 16px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-actions ul {
+    background: #fff;
+    padding: 5px 5px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-actions ul li button {
+    background-color: transparent;
+    border: transparent;
+    margin: 0 10px;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-actions .rating-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-actions .rating-social .socail button {
+    min-width: 88px;
+    min-height: 34px;
+    color: #6C7375;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-actions .rating-social .socail button:first-child {
+    margin-inline-start: 30px;
+    margin-inline-end: 10px;
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-actions .rating-social .socail button img {
+    padding-inline-end: 8px;
+}
+
+.page-inner-info .inner-content header.header-icon {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.page-inner-info .inner-content header.header-icon h2 {
+    margin-top: 0;
+}
+
+.page-inner-info .inner-content header.header-icon p {
+    max-width: 837px;
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.page-inner-info .inner-content header h2 {
+    margin-top: 40px;
+    font-size: 35px;
+    font-weight: 600;
+    max-width: 845px;
+}
+
+.page-inner-info .inner-content header img {
+    max-width: 80px;
+}
+
+/* End Inner Page Title */
+
+/* Start Pagination Section */
+.pagi-sec ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: ltr;
+    margin-bottom: 85px;
+}
+
+.pagi-sec ul li {
+    margin: 7px;
+}
+
+.pagi-sec ul li a{
+    color: #002228;
+    text-decoration: none;
+    font-size: 18px;
+	padding:0px 10px;
+}
+.pagi-sec ul li a.active {
+    color: #fff !important;
+    background-color: var(--main-color) !important;
+    border-color: var(--main-color) !important;
+}
+
+.pagi-sec ul li a img {
+    width: 30px;
+}
+
+/* End Pagination Section */
+
+/* Start Page Feedback */
+.page-feedback .content {
+    background: #f0f4f8;
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.page-feedback .content .info p {
+    color: #002228;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.page-feedback .content .info p span {
+    padding-inline-end: 10px;
+}
+
+.page-feedback .content .info p a {
+    color: #d90000;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.page-feedback .content .info p a:first-of-type {
+    color: #6ab380;
+}
+
+.page-feedback .info-p {
+    border-top: 1px solid #a49f9f;
+    padding-top: 30px;
+    margin-bottom: 5rem;
+    color: #727272;
+    position: relative;
+}
+
+.page-feedback .info-p::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 139.4px;
+    height: 11.7px;
+}
+
+.page-feedback .feedback-check h4 {
+    color: #000000;
+    font-size: 25px;
+    margin-bottom: 18px;
+}
+
+.page-feedback .feedback-check ul li {
+    margin-bottom: 12px;
+}
+
+.page-feedback .feedback-check label {
+    color: #727272;
+    font-size: 18px;
+    padding-inline-start: 16px;
+}
+
+.page-feedback .feedback-check button {
+    min-width: 134.7px;
+    min-height: 49.5px;
+    max-width: fit-content;
+    margin: 0 auto;
+    background: #3ea3c1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-inline-start: 35px;
+}
+
+/* End Page Feedback */
+
+/* Start Footer Section */
+footer {
+    background-image: url('../assets/imgs/footer-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 70px;
+    color: #fff;
+    padding-bottom: 23px;
+}
+
+footer .logo img {
+    max-width: 190px;
+    width: 100%;
+}
+
+footer h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 17px;
+}
+
+footer a {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    line-height: 33px;
+}
+
+footer .footer-links a {
+    transition: all .3s;
+    display: inline-block;
+}
+
+footer .footer-links a:hover {
+    padding-inline-start: 10px;
+}
+
+footer .map {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+footer .map a {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer .map a img {
+    margin-inline-end: 10.5px;
+}
+
+footer .socail-media {
+    margin-top: 20px;
+}
+
+footer .socail-media ul {
+    display: flex;
+    align-items: center;
+}
+
+footer .socail-media ul li {
+    margin-inline-end: 8px;
+}
+
+footer .socail-media ul li a:hover {
+    padding: 0;
+}
+
+footer .socail-media ul li img {
+    width: 25px;
+    height: 25px;
+}
+
+footer .copyright {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+footer .copyright .links ul {
+    display: flex;
+    align-items: center;
+}
+
+footer .copyright .links ul li {
+    margin-inline-end: 20px;
+}
+
+footer .copyright .links ul li:last-child {
+    margin-inline-end: 0;
+}
+
+footer .copyright .tools ul {
+    display: flex;
+    align-items: center;
+    border-radius: 6px;
+    background: #fff;
+    color: #002228;
+    padding: 4px;
+}
+
+footer .copyright .tools ul li {
+    margin: 0 4px;
+}
+
+footer .copyright .tools ul li button {
+    background-color: transparent;
+    border: none;
+    transform: scale(-1, 1);
+}
+
+/* End Footer Section */
+
+.general-card {
+    background-color: #f4f7f9;
+    padding: 50px;
+    margin-bottom: 60px;
+    position: relative;
+    display: flex;
+}
+
+.general-card::after {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 139.4px;
+    height: 11.7px;
+}
+
+.general-card .icon {
+    width: 100px;
+}
+
+.general-card .info {
+    width: 100%;
+    margin-inline-start: 60px;
+}
+
+.general-card .info h4 {
+    color: #3ea3c1;
+    font-size: 35px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.general-card .info p {
+    color: #727272;
+    font-size: 20px;
+    max-width: 1200PX;
+}
+
+.general-card .info button {
+    min-width: 134.7px;
+    min-height: 49.5px;
+    max-width: fit-content;
+    margin: 0 auto;
+    background: #3ea3c1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 40px;
+}
+
+/* Start Buttons Hover */
+.geosptial-info .info button,
+.general-card .info button,
+.regulations article .regulation-card button,
+.media-center .media-content .news-update span,
+.media-center-section article .media-card .action button,
+.page-feedback .feedback-check button,
+.terms-conditions .terms-conditions-content .card-content button,
+.services-section article .services-card .info button,
+.services-section article .services-card .info button {
+    transition: 0.3s;
+}
+
+.geosptial-info .info button:hover,
+.general-card .info button:hover,
+.regulations article .regulation-card button:hover,
+.media-center .media-content .news-update span:hover,
+.media-center-section article .media-card .action button:hover,
+.page-feedback .feedback-check button:hover,
+.terms-conditions .terms-conditions-content .card-content button:hover,
+.services-section article .services-card .info button:hover,
+.services-section article .services-card .info button:hover {
+    background-color: #4cbdde !important;
+    color: #ffffff !important;
+}
+
+.about-us .title button,
+.services-section article .all-services-btn button,
+.media-center-section article .show-all button,
+.national-geospatial-page .move-to-national-geopatial button {
+    transition: 0.3s;
+}
+
+.about-us .title button:hover,
+.services-section article .all-services-btn button:hover,
+.media-center-section article .show-all button:hover,
+.national-geospatial-page .move-to-national-geopatial button:hover {
+    background-color: #4cbdde !important;
+    color: #ffffff !important;
+    transform: scale(1);
+}
+
+.about-us .title button img,
+.services-section article .all-services-btn button img,
+.media-center-section article .show-all button img,
+.national-geospatial-page .move-to-national-geopatial button img {
+    transition: 0.3s;
+}
+
+.about-us .title button:hover img,
+.services-section article .all-services-btn button:hover img,
+.media-center-section article .show-all button:hover img,
+.national-geospatial-page .move-to-national-geopatial button:hover img {
+    transform: rotate(-90deg);
+}
+
+.hvr-float-shadow {
+    transform: unset;
+}
+
+.hvr-float-shadow:before {
+    all: unset;
+}
+
+/* End Buttons Hover */
+
+/* start mega menu style  */
+.navbar .megamenu {
+    padding: 3rem;
+    min-height: 320px;
+    background: transparent linear-gradient(180deg, #00407e, #6ab380) 0% 0% no-repeat padding-box;
+    opacity: 0.96;
+    backdrop-filter: blur(30px);
+    padding-block: 30px;
+    opacity: 0.96;
+}
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+	.body{
+		font-size:18px !important;
+	}
+	.bodybig{
+		font-size:24px !important;
+	}
+	
+    .navbar .has-megamenu {
+        position: static !important;
+    }
+
+    .navbar .megamenu {
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+/* ============ desktop view .end// ============ */
+
+/* ============ mobile view ============ */
+@media (max-width: 991px) {
+	.body{
+		font-size:16px !important;
+	}
+	.bodybig{
+		font-size:20px !important;
+	}
+	h4{
+		font-size:28px !important;
+	}
+	.page-inner-info .inner-content header h2 {
+		font-size: 28px !important;
+	}
+	
+	
+    .navbar.fixed-top .navbar-collapse,
+    .navbar.sticky-top .navbar-collapse {
+        overflow-y: auto;
+        max-height: 90vh;
+        margin-top: 10px;
+    }
+}
+
+/* ============ mobile view .end// ============ */
+/* .dropdown-toggle:hover+.dropdown-menu {
+    display: block;
+} */
+
+/* .dropdown-menu:hover {
+    display: block;
+} */
+
+.dropdown-toggle::after {
+    all: unset;
+}
+
+.header-section .nav-item .nav-link {
+    padding-block: 2rem;
+}
+
+.navbar .megamenu .media-center-megamenu div {
+    margin-bottom: 10px;
+}
+
+.navbar .megamenu .media-center-megamenu p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .national-geospatial-info h1 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .national-geospatial-info h3 {
+    font-weight: bold;
+    font-size: 25px;
+    color: #fff;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .national-geospatial-info img {
+    max-width: 90px;
+    max-height: 70px;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .vedio-container {
+    gap: 30px;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .vedio-info {
+    background-color: var(--main-color);
+    border-radius: 12px;
+    opacity: 1;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    overflow: hidden;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .vedio-container .vedio-info p {
+    padding: 10px 20px;
+    flex: 1;
+    color: white;
+    font-size: 12px;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .vedio-container .vedio-info video {
+    height: auto;
+    width: 50%;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .vedio-container button:hover {
+    background-color: #4cbdde !important;
+    color: #ffffff !important;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .vedio-container img {
+    transition: 0.3s;
+    width: 30px;
+}
+
+.navbar .megamenu .national-geospatial-megamenu .vedio-container button:hover img {
+    transform: rotate(-90deg);
+}
+
+.navbar .megamenu ul li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+    border-bottom: 1px solid #ffffff6b;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+	border-top:0px;
+}
+
+.navbar .megamenu ul li a span {
+    width: 95%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.navbar .megamenu ul li a img {
+    transform: rotate(180deg);
+}
+
+.navbar .megamenu .national-geospatial-megamenu button {
+    min-width: 174px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.navbar .megamenu ul li a::before {
+    position: absolute;
+    content: "";
+    background-image: url('../assets/icons/left-blue-arrow.svg');
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+    width: 12px;
+    height: 12px;
+    transition: 0.3s;
+    background-repeat: no-repeat;
+}
+
+.navbar .megamenu ul li a:hover {
+    color: #00c5ff;
+    padding-inline-start: 20px;
+}
+
+.navbar .megamenu ul li a:hover:before {
+    left: 0;
+}
+
+.megamenu .col-megamenu .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 16px;
+    border-bottom: 1px solid white;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: 0.3s;
+    overflow: hidden;
+    background-color: transparent;
+    border-inline: none;
+    border-radius: 0;
+    padding-inline: 0;
+	border-bottom:1px solid #ffffff6b;
+	height:65px;
+}
+
+.megamenu .col-megamenu .dropdown-toggle span {
+    text-align: start;
+}
+
+.megamenu .col-megamenu .dropdown-menu {
+    background: transparent linear-gradient(180deg, #00407e 0%, #6ab380 100%) 0% 0% no-repeat padding-box;
+
+    opacity: 1;
+    backdrop-filter: blur(30px);
+    width: 100%;
+    text-align: start;
+    min-height: 269px;
+}
+
+.megamenu .col-megamenu .dropdown-menu li a span {
+    color: white;
+}
+
+.megamenu .col-megamenu .dropdown-menu li a:hover {
+    background-color: transparent;
+}
+
+.megamenu .dropdown .dropdown-menu li:last-child a {
+    /*border-bottom: none;*/
+}
+
+/* end mega menu style  */
+/************* Farooq CSS ***********************/
+.header-section .form .search-input {
+    position: relative;
+    margin-inline-end: 12px;
+}
+.header-section .form .search-input input {
+    background: transparent;
+    border-radius: 6px;
+    width: 190px;
+    height: 37px;
+    color: #fff;
+    padding-inline-start: 35px;
+    border: solid 2px #fff;
+}
+
+.header-section .form .search-input input:focus {
+    box-shadow: none;
+}
+
+.header-section .form .search-input ::placeholder {
+    color: #c4c4c4;
+}
+
+.header-section .form .search-input img {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.header-section .form button {
+    min-width: 123px;
+    min-height: 37px;
+    font-size: 15px;
+    background: transparent;
+    color: #fff;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    transition: all .3s;
+}
+
+.header-section .form button:hover {
+    background: var(--main-color);
+    border-color: var(--main-color);
+}
+.header-section .nav-item .nav-link {
+    text-decoration:none;
+}
+footer a:visited {
+    font-size: 16px;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    line-height: 33px;
+}
+body {
+    overflow-y: scroll !important;
+	height:auto;
+}
+.navbar .megamenu ul li a{
+	text-align:right;
+}
+.navbar .megamenu ul li a img {
+    transform: rotate(0deg);
+}
+.megamenu .col-megamenu .national-geospatial-megamenu .national-geospatial-info h1,.megamenu .col-megamenu .national-geospatial-megamenu .national-geospatial-info h3{
+	margin-top:unset !important;
+	margin-left:unset !important;
+	margin-right:unset !important;
+	font-family: var(--arabic-font) !important;
+}
+.navbar .megamenu .national-geospatial-megamenu a{
+    min-width: 174px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 17px;
+	text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+.navbar .megamenu .national-geospatial-megamenu .vedio-container a:hover {
+    background-color: #4cbdde !important;
+    color: #ffffff !important;
+}
+.navbar .megamenu .national-geospatial-megamenu .vedio-container img {
+    margin-left:4px;
+}
+.general-card .info h4 {
+    margin-right:unset;
+	margin-left:unset;
+	font-family: var(--arabic-font) !important;
+}
+/***********************************************/

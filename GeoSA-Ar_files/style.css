@@ -1,0 +1,2352 @@
+/* Start Carosuel Design */
+.main-carousel .carousel-indicators {
+    bottom: -60px;
+}
+
+.main-carousel .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+/* End Carosuel Design */
+
+/* Start Main Details Section */
+.main-carousel .main-details {
+    padding-top: 70px;
+    padding-bottom: 40px;
+    background-image: url('../assets/imgs/about-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-carousel .main-details .details-info {
+    color: #fff;
+    padding-inline-start: 20px;
+    border-inline-start: 1px solid;
+}
+
+.main-carousel .main-details .map-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-carousel .main-details .map-info button {
+    margin-inline-start: 40px;
+    border-radius: 12px;
+    background-color: #3b6b83;
+    border: none;
+    color: #fff;
+    min-width: 311px;
+    height: 96px;
+    transition: all .3s;
+}
+
+.main-carousel .main-details .map-info button img {
+    width: 45px;
+    margin-inline-end: 10px;
+}
+
+/* End Main Details Section */
+
+/* Start Regulations Section */
+.regulations {
+    padding: 110px 0;
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.regulations header h2 {
+    margin-bottom: 70px;
+    text-align: center;
+    color: #002228;
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+}
+
+.regulations header h2::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.regulations article .regulation-card {
+    padding: 37px 39.8px 40.5px 49.4px;
+    border-radius: 12px;
+    height: 100%;
+    background: #f2f3f5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    transition: all .3s;
+}
+
+.regulations article .regulation-card:hover {
+    transform: translateY(-10px);
+}
+
+.regulations article .regulation-card img {
+    max-height: 150px;
+    margin-bottom: 18px;
+}
+
+.regulations article .regulation-card h4 {
+    color: var(--main-color);
+    font-size: 35px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 65px;
+	font-family: var(--arabic-font) !important;
+}
+
+.regulations article .regulation-card h4::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 24px;
+    height: 5px;
+}
+
+.regulations article .regulation-card p {
+    color: var(--paragraph-color);
+    margin-bottom: 55px;
+}
+
+.regulations article .regulation-card .action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.regulations article .regulation-card .action img {
+    margin: 0;
+}
+
+.regulations article .regulation-card button {
+    background: var(--main-color);
+    padding: 0px 29.2px 17.3px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    transition: all .3s;
+    border: 1px solid var(--main-color);
+	height: 33px;
+}
+
+.regulations article .regulation-card button:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+/* End Regulations Section */
+
+/* Start About Us Section */
+.about-us {
+    background-image: url('../assets/imgs/geoBgEn.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 65px 0;
+	margin:-3%;
+}
+
+.about-us .title h2 {
+    font-size: 35px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    color: #fff;
+    position: relative;
+}
+
+.about-us .title h2::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: 98px;
+    left: 0;
+    width: 42px;
+    height: 5px;
+}
+
+.about-us .title button {
+    background: var(--main-color);
+    padding: 13.3px 29.2px 17.3px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    min-width: 135px;
+}
+
+.about-us .title button img {
+    margin-inline-end: 8px;
+}
+
+.about-us .info h3 {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.about-us .info h3::after {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 24px;
+    height: 5px;
+}
+
+.about-us .info h3 img {
+    width: 60px;
+    margin-inline-end: 20px;
+}
+
+.about-us .info p {
+    color: #fff;
+}
+
+/* End About Us Section */
+
+/* Start Services and Items Section */
+.services-section {
+    padding: 110px 0;
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.services-section header h2 {
+    margin-bottom: 70px;
+    text-align: center;
+    color: #002228;
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+}
+
+.services-section header h2::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.services-section article {
+    position: relative;
+}
+
+.services-section article .article-content {
+    padding: 0 60px;
+}
+
+.services-section article .services-card {
+    display: flex;
+    background: #f2f3f5;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.services-section article .services-card .info {
+    padding: 40px;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+.services-section article .services-card .info .main-img {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.services-section article .services-card .info img.img {
+    max-height: 150px;
+    margin-bottom: 20px;
+}
+
+.services-section article .services-card .info img {
+    margin-inline: 0;
+}
+
+.services-section article .services-card .info h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 58px;
+    position: relative;
+    line-height: 1.33;
+	text-align: right;
+	margin-right:0px
+}
+
+.services-section article .services-card .info h3::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    width: 24px;
+    height: 5px;
+}
+
+.services-section article .services-card .info p {
+    color: var(--paragraph-color);
+    margin-bottom: 40px;
+}
+
+.services-section article .services-card .info button {
+    background: var(--main-color);
+    padding: 0px 29.2px 17.3px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    transition: all .3s;
+    border: 1px solid var(--main-color);
+	height:33px;
+	margin-top:47px;
+}
+
+.services-section article .services-card .info button:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+.services-section article .services-card .services-img img {
+    height: 100%;
+    min-width: 200px;
+}
+
+.services-section article .all-services-btn {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.services-section article .all-services-btn button {
+    background: var(--main-color);
+    padding: 13.3px 29.2px 17.3px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    min-width: 174px;
+}
+
+.services-section article .all-services-btn button img {
+    margin-inline-end: 8px;
+}
+
+/* End Services and Items Section */
+
+/* Start Statistics Section */
+.statistics-section {
+    background-image: linear-gradient(to bottom, #00407e, #6ab380 187%);
+	margin-bottom:57px;
+}
+
+.statistics-section .content {
+    background-image: url('../assets/imgs/stat-bg.png');
+    padding: 110px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+	padding-bottom:39px;
+}
+
+.statistics-section .content header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 52px;
+}
+
+.statistics-section .content header h2 {
+    font-size: 50px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+}
+
+.statistics-section .content header h2::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.statistics-section .content article {
+    position: relative;
+}
+
+.statistics-section .content article .article-content {
+    padding: 0 60px;
+}
+
+.statistics-section .content article .statistics-card {
+    padding: 35.8px 27.6px 56px 27px;
+    border-radius: 12px;
+    box-shadow: 0 3px 30px 0 rgba(24, 106, 165, 0.16);
+    background-color: #fff;
+    height: 100%;
+    text-align: center;
+}
+
+.statistics-section .content article .statistics-card img {
+    max-height: 90px;
+}
+
+.statistics-section .content article .statistics-card h4 {
+    font-size: 65px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: var(--english-font);
+    font-weight: bold;
+}
+
+.statistics-section .content article .statistics-card p {
+    font-size: 24px;
+    color: #002228;
+    font-weight: 600;
+}
+
+.statistics-section .content article .info p {
+    font-size: 18px;
+    color: #fff;
+    margin-top: 30px;
+    text-align: end;
+}
+
+/* End Statistics Section */
+
+/* Start Media Center Section */
+.media-center-section {
+    padding: 20px 0;
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.media-center-section header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.media-center-section header p {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--main-color);
+}
+
+.media-center-section header h2 {
+    font-size: 50px;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+
+.media-center-section header .media-filter ul {
+    background: #f2f3f5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.media-center-section header .media-filter ul li button {
+    border: none;
+    background-color: transparent;
+    border: none;
+    background-color: transparent;
+    min-height: 43px;
+    min-width: 95px;
+    padding: 10px;
+    font-size: 11px;
+}
+
+.media-center-section header .media-filter ul li a{
+	color:#3da3c1;
+}
+
+
+.media-center-section header .media-filter ul li button img {
+    margin-inline-end: 4px;
+}
+
+.media-center-section header .media-filter ul li button.active {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.media-center-section header .media-filter ul li button.active img {
+    filter: brightness(0) invert(1);
+}
+
+.media-center-section header h2::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-50%, -50%);
+}
+
+.media-center-section article {
+    position: relative;
+}
+
+.media-center-section article .article-content {
+    padding: 0 60px;
+}
+
+.media-center-section article .media-card {
+    border-radius: 12px;
+    background-color: #f2f3f5;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.media-center-section article .media-card h4 {
+    color: var(--main-color);
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 40px 40px 0px 40px;
+}
+
+.media-center-section article .media-card p {
+    color: var(--paragraph-color);
+    padding: 0 40px 40px 40px;
+}
+
+.media-center-section article .media-card .action {
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.media-center-section article .media-card .action button {
+    min-width: 92.3px;
+    min-height: 32.9px;
+    margin-inline-start: 40px;
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+    border: 1px solid var(--main-color);
+    transition: all .3s;
+}
+
+.media-center-section article .media-card .action button:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+.media-center-section article .media-card .action time {
+    background: #6ab380;
+    padding: 4.7px 12.3px 4.2px 14px;
+    border-radius: 6px 0 0 6px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.media-center-section article .show-all {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.media-center-section article .show-all button {
+    background: var(--main-color);
+    padding: 13.3px 29.2px 17.3px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    min-width: 174px;
+}
+
+.media-center-section article .show-all button img {
+    margin-inline-end: 8px;
+}
+
+/* End Media Center Section */
+
+
+/* Start Owel Carousel Style */
+
+.owl-theme.owl-carousel .owl-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 102%;
+    transform: translate(-1%, -50%);
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+    background-color: transparent;
+}
+
+.owl-carousel .owl-nav button.owl-prev img {
+    transform: scale(-1, 1);
+}
+
+.owl-carousel .owl-nav button.owl-prev {
+    margin-inline-start: -52px;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    margin-inline-end: -52px;
+}
+
+.owl-stage {
+    display: flex;
+}
+
+.owl-stage .item {
+    height: 100%;
+}
+
+.owl-dots {
+    display: none;
+}
+
+.owl-carousel .owl-item img {
+    width: unset;
+    margin: auto;
+}
+
+.statistics-section .owl-carousel .owl-nav button.owl-prev img,
+.statistics-section .owl-carousel .owl-nav button.owl-next img {
+    filter: brightness(0) invert(1);
+}
+
+/* End Owel Carousel Style */
+
+/* Start Media Center Page */
+.media-center {
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.media-center .inner-page-title {
+    background-image: url('../assets/imgs/headerBg.png');
+}
+
+.media-center .media-content .media-img {
+    margin-top: -110px;
+}
+
+.media-center .media-content .media-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.media-center .media-content .media-info {
+    margin: 100px auto;
+    max-width: 1148px;
+}
+
+.media-center .media-content .media-info header h3 {
+    margin-bottom: 95px;
+    color: #3EA3C1;
+    font-size: 40px;
+    text-align: center;
+    line-height: 63px;
+    font-weight: 600;
+    position: relative;
+}
+
+.media-center .media-content .media-info header h3::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.media-center .media-content .media-info article p {
+    color: #727272;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.media-center .media-content .news-update {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: #F0F4F8;
+    padding: 24px 50px;
+    border-radius: 8px;
+    margin-bottom: 100px;
+}
+
+.media-center .media-content .news-update span {
+    display: inline-flex;
+    min-width: 135px;
+    min-height: 49px;
+    background: #3EA3C1;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.media-center .media-content .news-update p {
+    color: #002228;
+    font-size: 18px;
+}
+
+.media-center .media-content .news-update p img {
+    width: 26px;
+    margin-inline-end: 8px;
+}
+
+.media-center .media-center-section article .media-card h4 {
+    padding-top: 20px;
+}
+
+.media-center .media-center-section article .media-card .media-info {
+    margin: 0;
+    margin-top: 14px;
+    max-width: 100%;
+}
+
+.media-center .media-center-section article .rating-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.media-center .media-center-section article .rating-social svg {
+    color: #808080;
+}
+
+.media-center .media-center-section article .rating-social .socail {
+    margin: 10px 0;
+}
+
+.media-center .media-center-section article .rating-social .socail button {
+    min-width: 88px;
+    min-height: 34px;
+    background-color: #3DA3C1;
+    font-size: 14px;
+    border: none;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.media-center .media-content .media-center-section header .search-input {
+    position: relative;
+}
+
+.media-center .media-content .media-center-section header .search-input img {
+    position: absolute;
+    top: 10px; 	
+    left: 10px;
+}
+
+.media-center .media-content .media-center-section header .search-input input {
+    background: #F0F4F8;
+    padding-inline-start: 35px;
+}
+
+/* End Media Center Page */
+
+/* Start Terms and conditions Content */
+
+.terms-conditions .inner-page-title,
+.national-committee .inner-page-title,
+.research-committee .inner-page-title,
+.importance-of-geospatial-info .inner-page-title,
+.privacy-policy .inner-page-title {
+    background-image: url("../assets/imgs/headerBg02.png");
+}
+
+.terms-conditions .terms-conditions-content .page-img-title {
+    margin-top: -95px;
+}
+
+.terms-conditions .terms-conditions-content .page-img-title img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.top-chart {
+    position: relative;
+    margin-top: 50px;
+    padding-bottom: 20px;
+}
+
+.top-chart::after {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 42px;
+    height: 9px;
+    transform: translate(-50%, -50%);
+}
+
+.terms-conditions .terms-conditions-content .card-content,
+.national-committee .national-content .card-content,
+.research-committee .national-content .card-content {
+    height: 100%;
+    background: #f4f7f9;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.terms-conditions .terms-conditions-content .card-content::after,
+.national-committee .national-content .card-content::after,
+.research-committee .national-content .card-content::after {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 139.4px;
+    height: 11.7px;
+    transform: translate(-50%, -50%);
+}
+
+.terms-conditions .terms-conditions-content .terms-cards,
+.national-committee .national-content .terms-cards,
+.research-committee .national-content .terms-cards {
+    margin-bottom: 200px;
+}
+
+.terms-conditions .terms-conditions-content .card-content img,
+.national-committee .national-content .card-content img,
+.research-committee .national-content .card-content img {
+    max-height: 80px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.terms-conditions .terms-conditions-content .card-content h5,
+.national-committee .national-content .card-content h5,
+.research-committee .national-content .card-content h5 {
+    color: #3ea3c1;
+    font-size: 26px;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.terms-conditions .terms-conditions-content .card-content button {
+    min-width: 134.7px;
+    min-height: 49.5px;
+    max-width: fit-content;
+    margin: 0 auto;
+    background: #3ea3c1;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+}
+
+/* End Terms and conditions Content */
+
+
+.main-btn {
+    min-width: 135px;
+    min-height: 50px;
+    background-color: var(--main-color);
+    border-radius: 4px;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border: 1px solid var(--main-color);
+    transition: 0.3s;
+}
+
+.main-btn:hover {
+    background-color: transparent;
+    color: var(--main-color);
+}
+
+/* start board-of-directors page */
+/* start main director  */
+.board-of-directors-page {
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    padding-bottom: 8rem;
+}
+
+.board-of-directors-page .inner-page-title {
+    background-image: url('../assets/imgs/headerBg02.png');
+}
+
+.main-director {
+    padding-inline-start: 75px;
+    background-color: var(--section-background);
+    position: relative;
+    backdrop-filter: blur(50px);
+}
+
+.main-director .container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 18px;
+    width: 358px;
+    background-color: var(--main-color);
+}
+
+.main-director .info h3 {
+    font-size: 35px;
+    color: var(--main-color);
+    font-weight: bold;
+    margin-bottom: 9px;
+}
+
+.main-director .info h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 29px;
+    color: var(--paragraph-main-color);
+}
+
+.main-director .info p {
+    font-size: 20px;
+    color: var(--paragraph-main-color);
+}
+
+.main-director1 {
+    margin-top: -30px;
+}
+
+.main-director2 {
+    margin-top: 105px;
+}
+
+/* end main director  */
+/* start rest directors */
+.rest-directors {
+    margin-top: 89px;
+}
+
+.rest-directors .director {
+    border-bottom: 0.5px solid var(--border-color);
+    position: relative;
+    height: 100%;
+    padding-top: 2rem;
+}
+
+.rest-directors .director .image {
+    background-color: var(--section-background);
+    margin-bottom: 23px;
+}
+
+.rest-directors .director .image img {
+    margin-top: -50px;
+}
+
+.rest-directors .director::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 30px;
+    height: 10px;
+    width: 30%;
+    background-color: var(--main-color);
+}
+
+.rest-directors .director .info h4 {
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-size: 20px;
+	font-family: var(--arabic-font) !important;
+}
+
+.rest-directors .director .info h3 {
+    color: var(--paragraph-main-color);
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.rest-directors .director .info p {
+    color: var(--paragraph-main-color);
+    font-size: 18px;
+    margin-bottom: 39.5px;
+}
+
+/* end rest directors */
+/* start about page info */
+.about-page-info {
+    background-color: var(--section-background);
+    padding: 36px 0 32px;
+    margin-top: 301px;
+    font-size: 25px;
+}
+
+.about-page-info h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--paragraph-main-color);
+    margin-bottom: 0;
+}
+
+.about-page-info button {
+    color: var(--paragraph-main-color);
+    font-size: 25px;
+    color: var(--paragraph-main-color);
+    all: unset;
+    font-weight: 700;
+}
+
+.about-page-info .yes {
+    color: #6ab380 !important;
+}
+
+.about-page-info .reveiw span {
+    width: 4px;
+    height: 31px;
+    background-color: var(--paragraph-main-color);
+}
+
+/* end about page info */
+/* start result of vistors  */
+.result-of-vistors {
+    margin-top: 60px;
+    margin-bottom: 303px;
+}
+
+.result-of-vistors div {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+    position: relative;
+}
+
+.result-of-vistors div::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 17.05px;
+    width: 139.38px;
+    background-color: var(--main-color);
+}
+
+.result-of-vistors p {
+    font-size: 18px;
+    color: var(--paragraph-color);
+    margin-top: 36.5px;
+}
+
+/* end result of vistors  */
+
+/* end board-of-directors page */
+/* start geosptial data page  */
+/* start geosptial layout image */
+
+
+.geosptial-page .inner-page-title {
+    background-image: url('../assets/imgs/headerBg02.png');
+}
+
+.geosptial-image {
+    margin-top: -35px;
+    margin-bottom: 100px;
+}
+
+.geosptial-image img {
+    min-height: 150px;
+}
+
+.geosptial-image::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 9.89px;
+    width: 43.4px;
+    background-color: var(--main-color);
+    bottom: -50px;
+}
+
+/* end geosptial layout image */
+/* start geosptial info  */
+.geosptial-page .geosptial-info {
+    margin-bottom: 300px;
+}
+
+.geosptial-info .info-content {
+    gap: 60px;
+}
+
+.geosptial-info .info-content .image {
+    width: 240px;
+    min-width: 240px;
+    height: 197px;
+    background-color: var(--section-background);
+}
+
+.geosptial-info .info p {
+    color: var(--paragraph-color);
+    font-size: 18px;
+    margin-bottom: 55px;
+    max-width: 799px;
+}
+
+.geosptial-info .info.rules p {
+    max-width: 880px;
+}
+
+.about-page-info.geosptial {
+    margin-top: 530px;
+}
+
+.result-of-vistors.geosptial {
+    margin-bottom: 259px;
+}
+
+/* end geosptial info  */
+
+/* Start Evidence Page */
+
+.evidence-page .inner-page-title {
+    background-image: url('../assets/imgs/headerBg02.png');
+}
+
+.evidence-page .general-card .icon {
+    background: #3da3c1;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    height: 100px;
+}
+
+.evidence-page .intro-sec {
+    background: #042352;
+    color: #fff;
+    margin-top: -50px;
+	padding: 0px 100px !important;
+}
+.evidence-page .intro-sec p {
+    font-size: 18px;
+    padding: 20px;
+}
+
+/* End Evidence Page */
+/* start National Geospatial Platform  */
+
+
+.national-geospatial-page .inner-page-title {
+    background-image: url("../assets/imgs/headerBg02.png");
+}
+
+.national-geospatial-page .general-card .icon {
+    background: #3da3c1;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    height: 100px;
+}
+
+.national-geospatial-page .intro-sec {
+    background: #00417f;
+    color: #fff;
+    margin-top: -50px;
+}
+
+.national-geospatial-page .intro-sec p {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.national-geospatial-page .national-geospatial-card .geospatial-perpose ul {
+    padding-inline-start: 20px;
+}
+
+.national-geospatial-page .national-geospatial-card .geospatial-perpose ul li::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    width: 8px;
+    height: 8px;
+    background-color: var(--paragraph-color);
+    border-radius: 50%;
+    top: 50%;
+}
+
+.national-geospatial-page .national-geospatial-card .national-geospatial-services .image {
+    margin-bottom: 18px;
+    min-height: 97px;
+    font-size: 18px;
+    color: var(--paragraph-color);
+}
+
+.national-geospatial-page .national-geospatial-card .national-geospatial-benefits .benefit .benefit-number {
+    min-width: 136px;
+    min-height: 168.2px;
+    background-color: var(--main-color);
+    font-size: 54px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 27px;
+}
+
+.national-geospatial-page .national-geospatial-card .national-geospatial-services .col-12:not(:last-child),
+.national-geospatial-page .national-geospatial-card .national-geospatial-benefits .col-12:not(:last-child),
+.national-geospatial-page .national-geospatial-card .national-geospatial-layers .col-12:not(:last-child) {
+    border-inline-end: 1px solid #3ea3c1;
+}
+
+.national-geospatial-page .move-to-national-geopatial {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.national-geospatial-page .move-to-national-geopatial h4 {
+    color: #3ea3c1;
+    font-size: 40px;
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+.national-geospatial-page .move-to-national-geopatial button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.national-geospatial-page .move-to-national-geopatial button img {
+    margin-inline-end: 20px;
+    transition: 0.3s;
+}
+
+.national-geospatial-page .move-to-national-geopatial button:hover img {
+    transform: rotate(-90deg);
+}
+
+.national-geospatial-page .move-to-national-geopatial button {
+    padding: 0 15px;
+}
+
+/* end National Geospatial Platform  */
+/* Start National Committee Content */
+
+.national-committee .national-content .national-top-img {
+    background-image: url('/ar/About/PublishingImages/map.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.national-committee .national-content .national-top-img .content {
+    color: #fff;
+    font-size: 18px;
+    padding: 90px 35px;
+    background-image: linear-gradient(240deg, #844b4b00 17%, #003260ad 57%, #4b845cdb 76%);
+    margin-top: -60PX;
+}
+.national-committee .national-content .logo-section {
+    background-color: #f5f7fa;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 40px;
+    position: relative;
+}
+.national-committee .national-content .logo-section::before {
+    content: '';
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 139.4px;
+    height: 11.7px;
+}
+.national-committee .national-content .logo-section .title {
+    display: flex;
+    align-items: center;
+}
+.national-committee .national-content .logo-section .title .icon {
+    background: #3da3c1;
+    padding: 10px 30px;
+    margin-inline-end: 24px;
+}
+.national-committee .national-content .logo-section .title .info h4 {
+    color: #3ea3c1;
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+.national-committee .national-content .logo-section .title .info p {
+    color: #727272;
+    font-size: 18px;
+}
+.national-committee .national-content .logo-section .logos-imgs ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.national-committee .national-content .logo-section .logos-imgs ul li img {
+    max-height: 70px;
+    margin: 20px 0;
+    margin-inline-end: 20px;
+}
+.national-committee .national-content .nation-title h3 {
+    display: flex;
+    align-items: center;
+}
+.national-committee .national-content .nation-title {
+    color: #3ea3c1;
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.national-committee .national-content .nation-title h3 img {
+    background: #f5f7fa;
+    padding: 20px 40px;
+    width: 125px;
+    margin-inline-end: 30px;
+}
+.national-committee .national-content .national-top-img .content p {
+    max-width: 450px;
+}
+.national-committee .national-content .card-content p {
+    color: #727272;
+    font-size: 18px;
+}
+/* End National Committee Content */
+
+.united-nation-center-page .united-nation-centers .col-12:not(:last-child) {
+    border-inline-end: 1px solid #3ea3c1;
+}
+/* end united nation center */
+
+/* start establishment page */
+.establishment-page {
+    background-image: url("../assets/imgs/org-bg.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+.establishment-page .inner-page-title {
+    background-image: url("../assets/imgs/headerBg02.png");
+}
+.establishment-page .intro-sec {
+    background-image: linear-gradient(to bottom, #00407e, #6ab380 325%);
+    color: #fff;
+    margin-top: -50px;
+    padding: 58px 0;
+}
+.establishment-page .stages-of-the-establishment h1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #00222a;
+    margin-bottom: 50px;
+}
+.establishment-page .establishment-card.right {
+    margin-top: -300px;
+    position: relative;
+}
+.establishment-page .establishment-card.left {
+    position: relative;
+}
+.establishment-page .establishment-card.right::before {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color: #3DA3C1;
+    position: absolute;
+    top: 30%;
+    right: -38%;
+    z-index: 102;
+}
+.establishment-page .establishment-card.left::before {
+    content: '';
+    width: 30%;
+    height: 2px;
+    background-color: #3DA3C1;
+    position: absolute;
+    top: 80%;
+    left: -38%;
+    z-index: 102;
+}
+.establishment-page .establishment-card {
+    margin-bottom: 100px;
+}
+.establishment-page .establishment-card .content {
+    position: relative;
+    background-color: #f0f4f8;
+    padding: 0 65px;
+}
+.establishment-page .establishment-card .content:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 358px;
+    height: 18px;
+    background-color: var(--main-color);
+}
+.establishment-page .establishment-card .content .image {
+    padding-top: 65px;
+}
+.establishment-page .establishment-card.right .content .image img {
+    transform: scale(-1, 1);
+    margin-inline-start: 35%;
+}
+.establishment-page .establishment-card.left .content .image img {
+    transform: scale(-1, 1);
+    position: relative;
+    right: 35%;
+}
+.establishment-page .establishment-card .content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+.establishment-page .establishment-card .content h3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #00222a;
+    position: relative;
+    padding-bottom: 30px;
+}
+.establishment-page .establishment-card .content h3:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 28px;
+    height: 8px;
+    background-color: var(--main-color);
+}
+.establishment-page .establishment-card .content button {
+    padding: 3px 19.5px 3px 17.6px;
+    border-radius: 6px;
+    background-color: #002228;
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.establishment-page .establishment-card .content p {
+    font-size: 18px;
+    color: var(--paragraph-color);
+    padding-bottom: 90px;
+	line-height:2;
+}
+/* end establishment page */
+.side-map .modal {
+    margin: 0 !important;
+}
+.side-map .modal-dialog {
+    margin: 0 !important;
+}
+.side-map .modal .modal-dialog {
+    max-width: 100%;
+}
+.side-map .modal .modal-content {
+    background-color: #002228;
+    height: 100vh;
+    overflow-y: auto;
+    padding: 20px;
+}
+.side-map .modal .modal-header {
+    font-size: 18px;
+    color: #fff;
+    border-bottom: 0;
+    margin-bottom: 90px;
+}
+.side-map .modal .modal-header span {
+    margin-inline-start: 20px;
+}
+.side-map .modal .modal-body .links-container {
+    margin-bottom: 80px;
+}
+.side-map .modal .modal-body .image {
+    min-width: 51px;
+    height: 51px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: -15px;
+}
+.side-map .modal .modal-body .links h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+.side-map .modal .modal-body .links ul li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2.5;
+}
+.side-map .modal .exit-modal {
+    margin: 40px auto;
+}
+.side-map .modal .exit-modal {
+    max-width: 90%;
+    margin: auto;
+    border-top: 1px solid white;
+    width: 100%;
+    padding: 40px 0;
+}
+.side-map .modal .exit-modal .btn-close {
+    background-image: url("../assets/icons/close-modal-btn.svg");
+    background-size: inherit;
+    width: 40px;
+    height: 40px;
+}
+/* Section Site Map */
+.side-map-section {
+    background-color: #002228;
+    /* height: 100vh; */
+    padding: 20px;
+}
+.side-map-section .modal-header {
+    font-size: 18px;
+    color: #fff;
+    border-bottom: 0;
+    margin-bottom: 90px;
+}
+.side-map-section .modal-header span {
+    margin-inline-start: 20px;
+}
+.side-map-section .modal-body .links-container {
+    margin-bottom: 80px;
+}
+.side-map-section .modal-body .image {
+    min-width: 51px;
+    height: 51px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: -15px;
+}
+.side-map-section .modal-body .links h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 30px;
+}
+.side-map-section .modal-body .links ul li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 2.5;
+}
+.side-map-section .exit-modal {
+    margin: 40px auto;
+}
+.side-map-section .exit-modal {
+    max-width: 90%;
+    margin: auto;
+    border-top: 1px solid white;
+    width: 100%;
+    padding: 40px 0;
+}
+.side-map-section .exit-modal .btn-close {
+    background-image: url("../assets/icons/close-modal-btn.svg");
+    background-size: inherit;
+	width: 40px;
+    height: 40px;
+}
+/* Section Site Map */
+.geosptial-info .info {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.geosptial-info .info button {
+    width: fit-content;
+}
+.geosptial-info .info p {
+    color: var(--paragraph-color);
+    font-size: 18px;
+    max-width: 799px;
+    margin-bottom: 30px;
+}
+/* Start Organization Page */
+.organization-page {
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.organization-page .inner-page-title {
+    background-image: url('../assets/imgs/headerBg02.png');
+}
+
+.organization-page .organization-card .general-card .icon {
+    background: #3da3c1;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    height: 100px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.organization-page .organization-card .general-card .info .title h4 {
+    color: #727272;
+    font-size: 25px;
+    margin: 0;
+}
+
+.organization-page .organization-card .general-card .info .body {
+    margin-top: 40px;
+
+}
+
+.organization-page .organization-card .general-card .info .body .parag {
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    padding: 0 20px;
+    border-inline-end: 1px solid #3ea4c3;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.organization-page .organization-card .general-card .info .body .note p {
+    color: #3ea4c3;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+.organization-page .organization-card .general-card .info .body ul {
+    list-style: disc;
+}
+
+.organization-page .organization-card .general-card .info .body ul li {
+    color: #727272;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.organization-page .organization-card .general-card .info .body .table>:not(caption)>*>* {
+    background: transparent;
+    border: none;
+    padding: .3rem .3rem;
+}
+
+.organization-page .organization-card .general-card .info .body .table span {
+    display: block;
+    text-align: center;
+    color: #727272;
+    background-color: #3ea4c352;
+    padding-block: 8px;
+    white-space: nowrap;
+    padding-inline: 10px;
+}
+
+.organization-page .intro-sec {
+    background-image: linear-gradient(to bottom, #00407e, #6ab380 310%);
+    color: #fff;
+    margin-top: -50px;
+    padding: 3rem 100px;
+}
+
+.organization-page .intro-sec p {
+    font-size: 18px;
+    padding: 20px;
+    padding-inline-start: 50px;
+}
+
+.organization-page .intro-sec .img-view {
+    text-align: center;
+}
+
+.organization-page .intro-sec .img-view img {
+    max-width: 200px;
+    margin: auto;
+}
+
+.organization-page .main-card {
+    display: flex;
+    align-items: center;
+}
+
+.organization-page .main-card .icon {
+    width: 150px;
+    margin-inline-end: 24px;
+}
+
+.organization-page .main-card .info p {
+    color: #727272;
+    font-size: 26px;
+    max-width: 550px;
+    line-height: 50px;
+}
+
+/* End Organization Page */
+.establishment-page h1,h2,h3 {
+	font-family: var(--arabic-font) !important;
+}
+
+
+/********* News Spotlight Modified Date Section *************/
+#LatestNewsModifiedDate{
+    font-style: normal !important;
+}
+
+.MediaTabs {
+    color: #3da4c1 !important;
+}
+
+.glass
+{
+  height:200px;
+  width:350px; 
+  border-radius:10px;
+  backdrop-filter: blur(25px) saturate(140%); 
+  -webkit-backdrop-filter: blur(25px) saturate(140%);
+  background-color: rgba(61,164,193,0.08);  
+}
+
+/********************** Farooq CSS ************************/
+.header-section header button {
+    min-width: 15px;
+    padding: 0px;
+    vertical-align: unset !important;
+}
+#s4-bodyContainer{
+	padding-bottom:unset !important;
+}
+#s4-workspace{
+	height:unset !important;
+}
+.mainContentPlaceHolder .carousel-indicators [data-bs-target] {
+    min-width: 10px;
+    min-height: 10px;
+ }
+ .owl-carousel .owl-nav button.owl-prev {
+    min-width: unset !important;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+    min-width: unset !important;
+}
+.services-section article .services-card .services-img img {
+    max-width: 200px;
+}
+.about-us .title a {
+    background: var(--main-color);
+    padding: 13.3px 29.2px 17.3px;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    min-width: 135px;
+	text-decoration:none;
+}
+.mainContentPlaceHolder .main-details{
+	padding-top: 23px;
+    padding-bottom: 40px;
+    background-image: url(../assets/imgs/about-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mainContentPlaceHolder .main-details .details-info {
+    color: #fff;
+    padding-inline-start: 20px;
+    border-inline-start: 1px solid;
+}
+.mainContentPlaceHolder .main-details .map-info {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.mainContentPlaceHolder .main-details .map-info button {
+    margin-inline-start: 40px;
+    border-radius: 12px;
+    background-color: #3b6b83;
+    border: none;
+    color: #fff;
+    min-width: 311px;
+    height: 96px;
+    transition: all .3s;
+}
+.mainContentPlaceHolder .carousel-indicators {
+    bottom: -60px;
+}
+.mainContentPlaceHolder .carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+.main-director .info h3,.main-director .info h1 {
+    line-height: unset;
+    margin: 0px 0px 9px 0px;
+	font-family: var(--arabic-font);
+}
+footer .copyright .tools ul li button{
+	min-width: unset;
+    padding: 0px;
+}
+.organization-page .organization-card .general-card .icon h2{
+    color: #fff !important;
+}
+.establishment-page {
+    padding-top:1px;
+}
+/*27-08-2024*/
+@media (min-width: 992px) {
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+}
+
+.geospatial-permits {
+    background-image: url("../assets/imgs/geos");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    transform: scaleX(1);
+}
+
+.geospatial-permits .inner-page-title {
+    background-image: url("../assets/imgs/headerBg02.png");
+}
+
+.geospatial-permits .national-content .national-top-img {
+    background-image: url("/ar/products/publishingimages/geosptial-permits-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.geospatial-permits .national-content .national-top-img .content {
+    color: #fff;
+    font-size: 18px;
+    padding: 90px 35px;
+    margin-top: -60px;
+}
+
+.geospatial-permits .national-content .national-top-img .content p {
+    max-width: 450px;
+    transform: scaleX(1);
+}
+
+.geospatial-licenses {
+    background-image: url("../assets/imgs/geos");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+    transform: scaleX(1);
+}
+
+.geospatial-licenses .inner-page-title {
+    background-image: url("../assets/imgs/headerBg02.png");
+}
+
+.geospatial-licenses .national-content .national-top-img {
+    background-image: url("/ar/products/publishingimages/geospatial-licenses.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.geospatial-licenses .national-content .national-top-img .content {
+    color: #fff;
+    font-size: 18px;
+    padding: 90px 35px;
+    margin-top: -60px;
+}
+
+.geospatial-licenses .national-content .national-top-img .content p {
+    max-width: 450px;
+    transform: scaleX(1);
+}
+
+/* ------------------------------------------------------- */
+
+.permits-licenses-content .goals-card .info h4 {
+    margin-bottom: 70px;
+}
+
+.permits-licenses-content .goals-card .goals .goal {
+    display: flex;
+    gap: 44px;
+    align-items: center;
+}
+
+.permits-licenses-content .goals-card .goals .goal .goal-num {
+    min-width: 95px;
+    min-height: 95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    color: white;
+    font-size: 43.4px;
+}
+
+.permits-licenses-content .permits-licenses-terms {
+    padding: 32px 16px;
+    border-radius: 12px;
+    background-color: var(--main-color);
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.permits-licenses-content .terms-info {
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--paragraph-main-color);
+    border-top: 1px solid var(--main-color);
+}
+
+.permits-licenses-content .services .services-info,
+.permits-licenses-content .services .service-rate {
+    padding: 50px;
+    background-color: #f4f7f9;
+    border-radius: 12px;
+    min-height: 700px;
+}
+
+.geospatial-licenses .permits-licenses-content .services .services-info,
+.geospatial-licenses .permits-licenses-content .services .service-rate {
+    min-height: 920px;
+}
+
+.permits-licenses-content .services .services-info .service {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 80px;
+}
+
+.permits-licenses-content .services .services-info .service:last-child {
+    margin-bottom: 0;
+}
+
+.permits-licenses-content .services .services-info .service .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.permits-licenses-content .services .services-info .service h4 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--paragraph-main-color);
+    margin-bottom: 0;
+}
+
+.permits-licenses-content .services .services-info .service p {
+    font-size: 16px;
+    color: var(--paragraph-color);
+}
+
+.permits-licenses-content .services .service-rate .service-container {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.permits-licenses-content .services .service-rate .info {
+    padding: 14px 40px;
+    background-color: var(--main-color);
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.permits-licenses-content .services .service-rate .stars {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.permits-licenses-content .service-rate .rating-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 66px;
+}
+
+.permits-licenses-content .services .service-rate .rating-info .recent-info {
+    color: var(--paragraph-color);
+}
+
+.permits-licenses-content .services .service-rate .rating-info .recent-num {
+    font-size: 35px;
+    color: var(--main-color);
+}
+
+.permits-licenses-content .services .service-rate .icon {
+    width: fit-content;
+    margin-inline-start: auto;
+}
+
+.permits-licenses-content .services .service-dates .content {
+    background: #f0f4f8;
+    padding: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.permits-licenses-content .services .service-dates .content .info p {
+    color: #002228;
+    font-size: 18px;
+    color: var(--paragraph-color);
+}
+
+.permits-licenses-content .services .create-order {
+    padding: 18px 70px;
+    background-color: var(--main-color);
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+}
+.permits-licenses-content .services-info h4{
+	margin:0px !important;
+}
+.permits-licenses-content .services-info{
+	font-family: var(--arabic-font) !important;
+}
+.cmg-soon{
+	font-size:12px;
+	text-align:left;
+	margin-left:10px;
+	color:yellow !important;
+}
+.geospatial-licenses .national-content .standard-top-img {
+    background-image: url("/ar/controlAndcompliance/publishingimages/standards.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.geospatial-licenses .national-content .standard-top-img .content {
+    color: #fff;
+    font-size: 18px;
+    padding: 90px 35px;
+    margin-top: -60px;
+}
+
+.geospatial-licenses .national-content .standard-top-img .content p {
+    max-width: 450px;
+    transform: scaleX(1);
+}
+.card-content a,.info a{
+	color:#fff !important;
+	
+}
+.info a#YesAnchor{
+	color:#6ab380 !important;
+	
+}
+.info a#NoAnchor{
+	color:#d90000 !important;
+	
+}
+.ms-webpart-chrome-vertical,.ms-webpart-zone,div.ms-webpart-cell-vertical-inline-table{
+	display:unset !important;
+}
+/*27-08-2024 - End*/
+/*********************************************************/
+
+
+
+/************************* RIKAZ CHANGES/ADDITIONS **************************/
+/* start united nation center */
+.united-nation-center-page .inner-page-title {
+    background-image: url("../assets/imgs/headerBg02.png");
+}
+
+.united-nation-center-page .general-card .icon {
+    background: #3da3c1;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    height: 100px;
+}
+
+.united-nation-center-page .intro-sec {
+    background: #00417f;
+    color: #fff;
+    margin-top: -50px;
+}
+
+.united-nation-center-page .intro-sec p {
+    font-size: 18px;
+    padding: 20px;
+}
+
+.national-committee .national-content .logo-section,
+.research-committee .national-content .logo-section {
+    background-color: #f5f7fa;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    padding: 40px;
+    position: relative;
+}
+
+.national-committee .national-content .logo-section::before,
+.research-committee .national-content .logo-section::before {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 139.4px;
+    height: 11.7px;
+}
+
+.national-committee .national-content .logo-section .title,
+.research-committee .national-content .logo-section .title {
+    display: flex;
+    align-items: center;
+}
+
+.national-committee .national-content .logo-section .title .icon,
+.research-committee .national-content .logo-section .title .icon {
+    background: #3da3c1;
+    padding: 10px 30px;
+    margin-inline-end: 24px;
+}
+
+.national-committee .national-content .logo-section .title .info h4,
+.research-committee .national-content .logo-section .title .info h4 {
+    color: #3ea3c1;
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.national-committee .national-content .logo-section .title .info p,
+.research-committee .national-content .logo-section .title .info p {
+    color: #727272;
+    font-size: 18px;
+}
+
+.national-committee .national-content .logo-section .logos-imgs ul,
+.research-committee .national-content .logo-section .logos-imgs ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.national-committee .national-content .logo-section .logos-imgs ul li img,
+.research-committee .national-content .logo-section .logos-imgs ul li img {
+    max-height: 70px;
+    margin: 20px 0;
+    margin-inline-end: 20px;
+}
+
+.national-committee .national-content .nation-title h3,
+.research-committee .national-content .nation-title h3 {
+    display: flex;
+    align-items: center;
+}
+
+.national-committee .national-content .nation-title,
+.research-committee .national-content .nation-title {
+    color: #3ea3c1;
+    font-size: 40px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.national-committee .national-content .nation-title h3 img,
+.research-committee .national-content .nation-title h3 img {
+    background: #f5f7fa;
+    padding: 20px 40px;
+    width: 125px;
+    margin-inline-end: 30px;
+}
+
+
+/* Start Org Page */
+.parent-navbar ul li {
+    width: 50%;
+}
+.parent-navbar ul li button {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #707070;
+    border-radius: 0px !important;
+    padding-block: 15px;
+    font-size: 18px;
+    padding-block: 14px;
+    font-size: 18px;
+    color: #727272;
+    position: relative;
+}
+.parent-navbar ul li button::after {
+    content: "";
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 139.4px;
+    height: 11.7px;
+}
+.parent-navbar ul li button.active {
+    background-color: #3ea3c1 !important;
+    border-color: #3ea3c1 !important;
+}
+
+.parent-navbar ul li button.active::after {
+    all: unset;
+}
+
+.parent-navbar ul li button:hover {
+    color: #727272;
+}
+
+.child-tabs li button {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #707070;
+    border-radius: 0px !important;
+    padding-block: 14px;
+    font-size: 18px;
+    color: #727272;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.child-tabs li button.active {
+    background-color: #3ea3c1 !important;
+    border-color: #3ea3c1 !important;
+}
+
+.child-tabs li button:hover {
+    color: #727272;
+}
+/* End Org Page */
+
+
+
+
+/**** REMOVED FROM ORIGINAL CSS FILE FROM 3P **/
+
+/*
+.national-geospatial-page {
+    background-image: url("../assets/imgs/org-bg.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.terms-conditions,
+.national-committee,
+.research-committee {
+    background-image: url("../assets/imgs/org-bg.jpg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+.evidence-page {
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+
+
+.geosptial-page {
+    background-image: url('../assets/imgs/org-bg.jpg');
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: center;
+}
+*/
+
+/**** END REMOVED FROM ORIGINAL CSS FILE FROM 3P **/
+
+
+
+/************************* END RIKAZ CHANGES/ADDITIONS **************************/
+
+/******************* National Day Logo CSS **********************/
+.nd-logo{
+	margin-right: 20px;
+}
+@media(max-width: 478px) {
+    .nd-logo{
+		width:137px;
+	}
+}
+/******************* National Day Logo CSS **********************/

@@ -1,0 +1,127 @@
+ var ArabicReasonsYes = ["وجدت الصفحة مفيدة وواضحة","تمكنت من الوصول للمعلومات بسهولة","سبب آخر"];
+	 var EnglishReasonsYes = ["I found the page useful and clear", "I was able to access information easily", "Other Reason"];	
+
+	 var ArabicReasonsNo = ["لم أتمكن من إيجاد المعلومات المراد الحصول عليها","وجدت صعوبة في القراءة عند تصفح هذه الصفحة","سبب آخر"];
+	 var EnglishReasonsNo = ["I could not find the information I wanted to get", "I found this page difficult to read", "Other Reason"];				
+			 
+    $(document).ready(function () {
+             $("#RatingModal").on('hidden.bs.modal', function () {
+                 grecaptcha.reset();
+                 $("#CaptchaMsgDiv").text("");
+                 $("#hfSelectedRating")[0].value = '';
+                 $("#txtComments")[0].value = '';
+                 $('#charNum').text("0 / 100");
+				 $("#ReasonsDiv").empty();
+             });
+             $("#YesAnchor").click(function (event) {
+                 event.preventDefault();
+                 $("#hfSelectedRating").val("Like");				 
+				 if (_spPageContextInfo.webLanguage == 1025) {
+					ArabicReasonsYes.forEach(function(item, index){				
+						$("#ReasonsDiv").append('<div class="form-check"><input class="form-check-input" type="radio" name="Reason" id="flexRadioDefault' + index + '" value="' + item +'" onclick="handleClick(this);"><label class="form-check-label" for="flexRadioDefault' + index + '">' + item + '</label></div>');
+					})
+				 }
+				 else{
+					EnglishReasonsYes.forEach(function(item, index){				
+						$("#ReasonsDiv").append('<div class="form-check"><input class="form-check-input" type="radio" name="Reason" id="flexRadioDefault' + index + '" value="' + item +'" onclick="handleClick(this);"><label class="form-check-label" for="flexRadioDefault' + index + '">' + item + '</label></div>');
+					})
+				 }	
+             });
+             $("#NoAnchor").click(function (event) {
+                 event.preventDefault();
+                 $("#hfSelectedRating").val("Dislike");				
+				 if (_spPageContextInfo.webLanguage == 1025) {
+					ArabicReasonsNo.forEach(function(item, index){				
+						$("#ReasonsDiv").append('<div class="form-check"><input class="form-check-input" type="radio" name="Reason" id="flexRadioDefault' + index + '" value="' + item +'" onclick="handleClick(this);"><label class="form-check-label" for="flexRadioDefault' + index + '">' + item + '</label></div>');
+					})
+				 }
+				else{
+					EnglishReasonsNo.forEach(function(item, index){				
+						$("#ReasonsDiv").append('<div class="form-check"><input class="form-check-input" type="radio" name="Reason" id="flexRadioDefault' + index + '" value="' + item +'" onclick="handleClick(this);"><label class="form-check-label" for="flexRadioDefault' + index + '">' + item + '</label></div>');
+					})
+				}
+             });
+			
+             $("#btnsubmitrating").click(function (event) {
+                 event.preventDefault();
+                 var CommentRequiredMsg = _spPageContextInfo.webLanguage == 1025 ? "الرجاء إدخال السبب !" : "Please enter reason !";
+                 if ($("#hfSelectedReason")[0].value == 'سبب آخر' && $('#txtComments').val().length > 0 && $("#hfSelectedReason")[0].value != '') {
+                     var CaptchaRequiredMsg = _spPageContextInfo.webLanguage == 1025 ? "يرجى إكمال التحقق من الكابتشا!" : "Please complete captcha verification !";
+                     var rcres = grecaptcha.getResponse();
+                     if (rcres.length) {
+                         grecaptcha.reset();
+                         $("#CaptchaMsgDiv").text("");
+                         var objSaveRating = new geosa.saverating();
+                         objSaveRating.init();
+                     } else {
+                         grecaptcha.reset();
+                         $("#CaptchaMsgDiv").text(CaptchaRequiredMsg);
+                     }
+                 }
+				 else if($("#hfSelectedReason")[0].value != 'سبب آخر' && $("#hfSelectedReason")[0].value != ''){
+					var CaptchaRequiredMsg = _spPageContextInfo.webLanguage == 1025 ? "يرجى إكمال التحقق من الكابتشا!" : "Please complete captcha verification !";
+                     var rcres = grecaptcha.getResponse();
+                     if (rcres.length) {
+                         grecaptcha.reset();
+                         $("#CaptchaMsgDiv").text("");
+                         var objSaveRating = new geosa.saverating();
+                         objSaveRating.init();
+                     } else {
+                         grecaptcha.reset();
+                         $("#CaptchaMsgDiv").text(CaptchaRequiredMsg);
+                     }
+				 }
+                 else {
+                     $("#CaptchaMsgDiv").text(CommentRequiredMsg);
+                 }
+             });
+             $('#txtComments').keyup(function (event) {
+                 $("#CaptchaMsgDiv").text("");
+                 var maxLength = 100;
+                 var strLength = $('#txtComments').val().length;
+                 var charRemain = (maxLength - strLength);
+
+                 if (charRemain < 0) {
+                     if (_spPageContextInfo.webLanguage == 1025) {
+                         $('#charNum').css({ "color": "red" });
+                         $('#charNum').text('لقد تجاوزت الحد الأقصى لعدد الأحرف ' + maxLength)
+                     }
+                     else {
+                         $('#charNum').css({ "color": "red" });
+                         $('#charNum').text('You have exceeded the limit of ' + maxLength)
+                     }
+                 } else {
+                     $('#charNum').css({ "color": "black" });
+                     $("#charNum").text(strLength + ' / ' + maxLength);
+                 }
+             });
+         });
+
+         function loadCaptcha() {
+             grecaptcha.render('recap1', {
+                 'sitekey': '6LdkcyQpAAAAAKX8SOVHJ5jDkLb1D4pXtxZ2P_kF'
+             });
+         }
+
+         var ValidateCaptcha = function () {
+             $("#CaptchaMsgDiv").text("");
+         };
+		 
+		 function handleClick(myRadio) {
+				var selectedReason = myRadio.value;
+				$("#hfSelectedReason").val(selectedReason);
+				if (_spPageContextInfo.webLanguage == 1025){
+					if(selectedReason.includes("سبب آخر")){
+						$("#textboxDiv").show();
+					}else{
+						$("#textboxDiv").hide();
+					}
+				}
+				else{
+					if(selectedReason.includes("Other Reason")){
+						$("#textboxDiv").show();
+					}else{
+						$("#textboxDiv").hide();
+					}
+				}
+			}				 

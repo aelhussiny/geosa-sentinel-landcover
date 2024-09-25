@@ -1,0 +1,109 @@
+body {
+    direction: rtl;
+    font-family: var(--arabic-font);
+}
+
+.regulations article .regulation-card h4::before,
+.about-us .title h2::before,
+.about-us .info h3::after,
+.services-section article .services-card .info h3::before,
+.main-director .container::before,
+.establishment-page .establishment-card .content:after,
+.establishment-page .establishment-card .content h3:after {
+    left: unset;
+    right: 0;
+}
+
+.header-section form .search-input img,
+.media-center .media-content .media-center-section header .search-input img {
+    left: unset;
+    right: 10px;
+}
+
+.about-us {
+    background-image: url('../assets/imgs/geoBg.png');
+	background-size:cover;
+}
+
+.owl-carousel .owl-nav button.owl-prev img {
+    transform: unset;
+}
+
+.owl-carousel .owl-nav button.owl-next img {
+    transform: scale(-1, 1);
+}
+
+.inner-page-title .page-inner-info .inner-content .inner-page-breadcrumb ul li a::after {
+    background-image: url(/style library/geosa/newdesign24/assets/icons/left-arrow.svg);
+    left: 25px;
+    right: unset;
+    height: 13px;
+    top: 6px;
+	transform: rotate(180deg)
+}
+.inner-page-title .page-inner-info .inner-content .inner-page-breadcrumb ul li:last-child a::after {
+    background-image:unset;
+    right: unset;
+}
+
+.general-card::after,
+.page-feedback .info-p::before,
+.result-of-vistors div::before {
+    left: 0;
+    right: unset;
+}
+
+.national-committee .national-content .national-top-img .content {
+    background-image: linear-gradient(387deg, #844b4b00 17%, #003260ad 57%, #4b845cdb 76%);
+}
+
+.form-check .form-check-input {
+    margin-left: 0;
+}
+
+.national-geospatial-page .national-geospatial-card .geospatial-perpose ul li::before {
+    left: unset;
+    right: -20px;
+}
+
+.establishment-page .establishment-card.left .content .image img {
+    left: 35%;
+    right: unset;
+    transform: unset;
+}
+
+.establishment-page .establishment-card.right .content .image img {
+    transform: unset;
+}
+
+.establishment-page .establishment-card.left::before {
+    right: -38%;
+    left: unset;
+}
+
+.establishment-page .establishment-card.right::before {
+    left: -38%;
+    right: unset;
+}
+
+/* Start mega menu  */
+.navbar .megamenu {
+    text-align: right;
+}
+
+.navbar .megamenu ul li a::before {
+    left: unset;
+    right: -20px;
+    transform: rotate(360deg) translateY(-50%);
+}
+
+.navbar .megamenu ul li a:hover:before {
+    left: unset;
+    right: 0;
+}
+
+.navbar .megamenu ul li a img {
+    transform: rotate(360deg);
+}
+
+/* End mega menu  */

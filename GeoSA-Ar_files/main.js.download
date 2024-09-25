@@ -1,0 +1,229 @@
+$(function () {
+	//$('.owl-carousel').addClass('off');
+	renderBreadcrumb();
+	
+	$("#btnLangSwitch").on("click",$.proxy(languageSwith,this));
+	displayPageModifiedDate('#PageModifiedDate');
+});
+
+function languageSwith(){
+	try{
+		var currentPath=window.location.pathname;
+		var pathSections="";
+		if(_spPageContextInfo.webLanguage==1025){
+			//pathSections=currentPath.replace('/ar/','/en/');
+			pathSections=currentPath.replace('/ar/','/ar/');
+		}else{
+			pathSections=currentPath.replace('/en/','/ar/');
+		}
+		window.location.href=window.location.origin +pathSections;
+	}catch(e){
+		console.log(e);
+	}
+}
+
+
+function renderBreadcrumb(){
+	try{
+	var mLink =$($(".navbar-nav")[0]).find("a");
+	$(mLink).each(function(index,item){
+		var linkRef=$(item).attr("href");
+		if(window.location.pathname==linkRef){
+			var parents=$(item).parents("li");
+			var strHtml=[];
+			$(parents).each(function(cindex,citem){
+				var linknk=$($(citem).first('li')).find('a')[0];
+				$(linknk).find('img').remove();
+				strHtml.push("<li><a href='"+$(linknk).attr('href')+"'>"+$(linknk).html()+'</a>');
+				console.log(strHtml.reverse());
+			});
+			if($("#GEOSABreadcrumbs")==undefined || $("#GEOSABreadcrumbs").length==0){
+				$(".inner-page-breadcrumb>ul").html("");
+				$(".inner-page-breadcrumb>ul").append("<li><a href='/ar'>الهيئة العامة للمساحة والمعلومات الجيومكانية</a></li>");
+				$(".inner-page-breadcrumb>ul").append(strHtml);
+			}
+			else{
+				$("#GEOSABreadcrumbs").html("");
+				$("#GEOSABreadcrumbs").append("<li><a href='/ar'>الهيئة العامة للمساحة والمعلومات الجيومكانية</a></li>");
+				$("#GEOSABreadcrumbs").append(strHtml);
+			}
+			
+		}
+	});	
+	}catch(e){
+		console.log(e);
+	}
+}
+
+$(function () {
+    var owl = $(".statistics-section .owl-carousel");
+    owl.owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 20,
+        nav: true,
+        rtl: true,
+        navText: [
+            '<img src="/Style%20Library/GEOSA/NewDesign24/assets/icons/right-arrow.svg" />',
+            '<img src="/Style%20Library/GEOSA/NewDesign24/assets/icons/right-arrow.svg" />'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            700: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            },
+            1200: {
+                items: 4
+            }
+        }
+    });
+});
+
+$(function () {
+    /*var owl = $(".services-section .owl-carousel");
+    owl.owlCarousel({
+        loop: true,
+        autoplay: true,
+        margin: 20,
+        nav: true,
+        rtl: true,
+        navText: [
+            '<img src="/Style%20Library/GEOSA/NewDesign24/assets/icons/right-arrow.svg" />',
+            '<img src="/Style%20Library/GEOSA/NewDesign24/assets/icons/right-arrow.svg" />'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            1250: {
+                items: 2
+            }
+        }
+    });*/
+});
+
+
+
+const bright = document.querySelector('.bright-btn');
+// const icreaseFont = document.querySelector('.increase-font');
+
+bright.addEventListener('click', function () {
+    document.body.classList.toggle('bright');
+});
+
+
+const footerbright = document.querySelector('.footer-bright-btn');
+// const icreaseFont = document.querySelector('.increase-font');
+
+footerbright.addEventListener('click', function () {
+    document.body.classList.toggle('bright');
+});
+// icreaseFont.addEventListener('click', function() {
+//     document.body.classList.toggle('increase-font');
+// });
+
+// var increment = document.getElementById('up'),
+//     decrement = document.getElementById('down'),
+//     fsize = document.querySelector('body'),
+//     step = 2;
+
+// fsize.style.fontSize = '16px';
+
+// increment.onclick = function () {
+//     fsize.style.fontSize = parseInt(fsize.style.fontSize) + step + 'px';
+// };
+
+// decrement.onclick = function () {
+//     fsize.style.fontSize = parseInt(fsize.style.fontSize) - step + 'px';
+// };
+
+var $affectedElements = $("p, h1, h2, h3, h4, h5, h6, a, button"); // Can be extended, ex. $("div, p, span.someClass")
+
+// Storing the original size in a data attribute so size can be reset
+$affectedElements.each(function () {
+    var $this = $(this);
+    $this.data("orig-size", $this.css("font-size"));
+});
+
+$(".btn-increase").click(function (event) {
+    $(event.currentTarget).preventDefault;
+	changeFontSize(1);
+	
+})
+
+$(".btn-decrease").click(function (event) {
+    changeFontSize(-1);
+	$(event.currentTarget).preventDefault;
+})
+
+$(".btn-orig").click(function (event) {
+	$(event.currentTarget).preventDefault;
+    $affectedElements.each(function () {
+        var $this = $(this);
+        $this.css("font-size", $this.data("orig-size"));
+    });
+})
+
+
+function changeFontSize(direction) {
+    $affectedElements.each(function () {
+        var $this = $(this);
+        $this.css("font-size", parseInt($this.css("font-size")) + direction);
+    });
+}
+
+const HeaderSpeakAloud = document.querySelector('.btnSpeakAloud');
+HeaderSpeakAloud.addEventListener('click', function () {
+new geosa.speakaloud().init();
+});
+
+const FooterSpeakAloud = document.querySelector('.footerbtnSpeakAloud');
+FooterSpeakAloud.addEventListener('click', function () {
+    new geosa.speakaloud().init();
+});
+
+const ActionsSpeakAloud = document.querySelector('.ActionsbtnSpeakAloud');
+if(ActionsSpeakAloud != null){
+    ActionsSpeakAloud.addEventListener('click', function () {
+    new geosa.speakaloud().init();
+});
+}
+function SpotlightModifiedDate(ControlID) {
+    try{
+        const MonthsInArabic = ["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","اكتوبر","نوفمبر","ديسمبر"];
+        var hijri = new HijriDate($(ControlID)[0].innerText, 'dd/mm/yyyy');
+        var inGreg = hijri.toGregorian();
+        var day = inGreg.getDay(); 
+        var year = inGreg.getFullYear(); 
+        var monthText = MonthsInArabic[(inGreg.getUTCMonth())];
+        var DocumentModifiedDate = `${day} ${monthText} ${year}`;
+        $(ControlID)[0].innerText = " " + DocumentModifiedDate;
+    }
+    catch(err){        
+    }
+    
+}
+function displayPageModifiedDate(ControlID) {    
+    try{
+        setTimeout(function(){
+			if($(ControlID)!=undefined && $(ControlID).length>0){
+				const MonthsInArabic = ["مُحرم", "صفر", "ربيع الأول", "ربيع الثاني", "جمادي الأول", "جمادي الثاني", "رجب", "شعبان", "رمضان", "شوال", "ذو القعدة", "ذو الحجة"]
+				var hijri = new HijriDate($(ControlID)[0].innerText, 'dd/mm/yyyy');    
+				var day = hijri.getDay()
+				var year = hijri.getFullYear()
+				var monthText = MonthsInArabic[(hijri.getMonth())]
+				var DocumentModifiedDate = `${day} ${monthText} ${year}`;        
+				$(ControlID)[0].innerText = " " + DocumentModifiedDate;
+			}
+		},2000);
+    }
+    catch (err){        
+    }    
+  }
+
+

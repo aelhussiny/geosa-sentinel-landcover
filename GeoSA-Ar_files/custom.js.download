@@ -1,0 +1,282 @@
+﻿var geosa = {} || new geosa();
+
+geosa.speakaloud = function () {
+	var self = this;
+	self.bodyTag = $("body");
+	self.init = function () {
+		$(".btnSpeakAloud").click($.proxy(self.readText, self));
+	}
+	self.readText = function () {
+		const speechSynth = window.speechSynthesis;
+		const enteredText = self.bodyTag[0].innerText;
+		if (!speechSynth.speaking && !enteredText.trim().length) {
+
+		}
+		if (!speechSynth.speaking && enteredText.trim().length) {
+			const newUtter = new SpeechSynthesisUtterance(enteredText);
+			speechSynth.speak(newUtter);
+		}
+		return false;
+	}
+}
+
+geosa.newslisting = function () {
+	var self = this;
+	self.webLanguage = _spPageContextInfo.webLanguage == 1025 ? 'ar' : 'en';
+	self.url = 
+	self.currentPage = null;
+	self.monthNamesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	self.monthNamesAr = ["يناير", "فبراير", "مارس", "أبريل", "مايو", "يونيو", "يوليو", "أغسطس", "سبتمبر", "اكتوبر", "نوفمبر", "ديسمبر"];
+	self.init = function () {
+		self.getallnews('getallnews', 1);
+	}
+
+	self.initHome = function () {
+		self.getAllNewsHome('getallnews', 1);
+	}
+	self.getAllNewsHome = function (operation, pageNumber) {
+		$.ajax({
+			url: '/_layouts/GEOSA/MediaCenterHandlers/HomepageHandler.handler?mediasection=' + operation + '&weburl=/' + self.webLanguage + '/mediacenter/news&itemscount=4&pagenumber=' + pageNumber + '&defaultimageurl=/',
+			dataType: 'json',
+			responseType: "json",
+			contentType: 'application/json; charset=utf-8',
+			async: false,
+			success: function (data) {
+				if (data != undefined && data != null && data.Data.length > 0) {
+					self.renderNewsListingHome(data.Data);
+				}
+			},
+			error: function (err) {
+				console.log(err);
+			}
+		});
+	}
+	self.renderNewsListingHome = function (data) {
+		var tempHtml = $(divtemplate).html();
+		var strHtml = tempHtml;
+		$("#mediaContainer").html("");
+		$(data).each(function (index, item) {
+			strHtml = tempHtml.replace("_#ImageURL#_", item.ImageURL);
+			strHtml = strHtml.replace("_#Title#_", item.Title);
+			strHtml = strHtml.replace("_#Description#_", item.Description);
+			strHtml = strHtml.replace("_#ReadMoreLink#_", item.ReadmoreLink);
+			strHtml = strHtml.replace("_#ModifiedDate#_", self.formatDateDisplay(item.LastModifiedDate));
+			$("#mediaContainer").append(strHtml);
+		});
+		self.startCarousel();
+	}
+	self.startCarousel = function () {
+		var owl = $(".media-center-section .owl-carousel");
+		owl.owlCarousel({
+			loop: true,
+			autoplay: true,
+			margin: 20,
+			nav: true,
+			rtl: true,
+			navText: [
+				'<img src="/Style%20Library/GEOSA/NewDesign24/assets/icons/right-arrow.svg" />',
+				'<img src="/Style%20Library/GEOSA/NewDesign24/assets/icons/right-arrow.svg" />'
+			],
+			responsive: {
+				0: {
+					items: 1
+				},
+				800: {
+					items: 2
+				},
+				1200: {
+					items: 3
+				}
+			}
+		});
+	}
+	self.getallnews = function (operation, pageNumber) {
+		$.ajax({
+			url: '/_layouts/GEOSA/MediaCenterHandlers/HomepageHandler.handler?mediasection=' + operation + '&weburl=/ar/mediacenter/news&itemscount=4&pagenumber=' + pageNumber + '&defaultimageurl=/',
+			dataType: 'json',
+			responseType: "json",
+			contentType: 'application/json; charset=utf-8',
+			async: false,
+			success: function (data) {
+				if (data != undefined && data != null && data.Data.length > 0) {
+					self.renderPaging(data.Pages);
+					self.rendernewslisting(data.Data);
+				}
+			},
+			error: function (err) {
+				console.log(err);
+			}
+		});
+	}
+	self.rendernewslisting = function (data) {
+		var tempHtml = $(divtemplate).html();
+		var strHtml = tempHtml;
+		$("#mediaContainer").html("");
+		$(data).each(function (index, item) {
+			strHtml = tempHtml.replace("_#ImageURL#_", item.ImageURL);
+			strHtml = strHtml.replace("_#Title#_", item.Title);
+			strHtml = strHtml.replace("_#Description#_", item.Description);
+			strHtml = strHtml.replace("_#ReadMoreLink#_", item.ReadmoreLink);
+			strHtml = strHtml.replace("_#ModifiedDate#_", self.formatDateDisplay(item.LastModifiedDate));
+			$("#mediaContainer").append(strHtml);
+		});
+
+	}
+	self.renderPaging = function (numberOfPages) {
+		var tempHtml = $("#tempPaging").html();
+		var strHtml = "";
+		$("#pagesDiv").html("");
+		for (var i = 1; i <= numberOfPages; i++) {
+			if (i == 1) {
+				strHtml += "<li class='page-item'><a class='page-link' href='#' data-page-number='" + (i.toString()) + "'>" + (i.toString()) + "</a></li>";
+			} else {
+				strHtml += "<li class='page-item'><a class='page-link' href='#' data-page-number='" + (i.toString()) + "'>" + (i.toString()) + "</a></li>";
+			}
+		}
+		$("#tempPaging").html(tempHtml.replace("_#Pages#_", strHtml));
+		$("#pagesDiv").append($("#tempPaging").html());
+		$(".page-link").click($.proxy(self.loadNews, self));
+		if (self.currentPage == null) {
+			$("#pagesDiv a").removeClass("active");
+			$($("#pagesDiv a")[1]).addClass("active");
+		} else {
+			$("#pagesDiv a").removeClass("active");
+			$($("#pagesDiv a")[parseInt(self.currentPage)]).addClass("active");
+		}
+	}
+	self.formatDateDisplay = function (DisplayedDateString) {
+		var articleDate = new Date(DisplayedDateString);
+		if (_spPageContextInfo.webLanguage == '1025') {
+			return articleDate.getDay() + ' ' + self.monthNamesAr[articleDate.getMonth()];
+		}
+		else {
+			return articleDate.getDay() + ' ' + self.monthNamesEn[articleDate.getMonth()];
+		}
+	}
+	self.loadNews = function (event) {
+		event.preventDefault()
+		self.currentPage = $(event.currentTarget).attr("data-page-number");
+		self.getallnews('getallnews', $(event.currentTarget).attr("data-page-number"));
+	}
+}
+
+geosa.saverating = function () {
+	var self = this;
+	self.operation = 'likedislikepage';
+	self.weburl = "/general/datalists";
+	self.pageurl = _spPageContextInfo.siteAbsoluteUrl + _spPageContextInfo.serverRequestPath;
+	self.pagerating = $("#hfSelectedRating").val();
+	self.reason = $("#hfSelectedReason").val();
+	self.comments = $("#txtComments").val();
+	self.init = function () {
+		if (self.pageurl != null && self.pagerating != null && self.comments != null) {
+			self.save();
+		}
+	};
+	self.save = function () {
+		$.ajax({
+			url: '/_layouts/GEOSA/MediaCenterHandlers/HomepageHandler.handler?mediasection=' + self.operation + '&weburl=' + self.weburl + '&pageurl=' + self.pageurl + '&pagerating=' + self.pagerating + '&comments=' + self.comments + '&reason=' + self.reason,
+			dataType: 'json',
+			responseType: "json",
+			contentType: 'application/json; charset=utf-8',
+			async: false,
+			success: function (data) {
+				$("#hfSelectedRating")[0].value = '';
+				$("#txtComments")[0].value = '';
+				$("#hfSelectedReason")[0].value = '';
+				$('#btnsuccessmodal').click();
+			},
+			error: function (err) {
+				console.log(err);
+			}
+		});
+	}
+}
+
+geosa.createbreadcrumbs = function () {
+	var self = this;
+	self.BreadCrumb = [];
+	self.Urls = [];
+	self.IgnorePaths = ["ar", "en", "pages", "mediacenter"]
+	self.HomePageUrl = _spPageContextInfo.siteAbsoluteUrl;
+	self.CurrentPageUrl = _spPageContextInfo.siteAbsoluteUrl + _spPageContextInfo.serverRequestPath;
+	self.RequestPathSplit = _spPageContextInfo.serverRequestPath.slice(1, _spPageContextInfo.serverRequestPath.length).split('/');
+	self.list = document.getElementById("GEOSABreadcrumbs");
+	self.init = function () {
+		if (_spPageContextInfo.webLanguage == 1025) {
+			self.Urls.push(self.HomePageUrl + '/ar');
+		}
+		else {
+			self.Urls.push(self.HomePageUrl + '/en');
+		}
+		self.RequestPathSplit.forEach(function (item) {
+			if (self.IgnorePaths.indexOf(item.toLowerCase()) === -1) {
+				if (self.CurrentPageUrl.split(item)[0] + item != self.CurrentPageUrl) {
+					self.Urls.push(self.CurrentPageUrl.split(item)[0] + item);
+				}
+				else {
+					if (document.title.includes("-")) {
+						self.BreadCrumb.push({ Title: document.title.split("-")[1], Url: '#' })
+					}
+					else {
+						self.BreadCrumb.push({ Title: document.title, Url: '#' })
+					}
+				}
+			}
+		});
+		self.getTitlesForMultipleUrls(self.Urls)
+			.then(results => {
+				results.forEach(result => {
+					self.BreadCrumb.push({ Title: result.title, Url: result.url })
+				});
+				self.BreadCrumb.push(self.BreadCrumb.shift());
+				for (i = 0; i < self.BreadCrumb.length; i++) {
+					var li = document.createElement('li');
+					li.innerHTML = '';
+					if (self.BreadCrumb[i].Url != '#') {
+						var a = document.createElement('a');
+						a.href = self.BreadCrumb[i].Url;
+						a.innerText = self.BreadCrumb[i].Title;
+						li.appendChild(a);
+					}
+					else {
+						li.innerText = self.BreadCrumb[i].Title;
+					}
+					self.list.appendChild(li);
+				}
+			})
+			.catch(error => console.error('Error:', error));
+	}
+	self.getSharePointWebTitle = function (url) {
+		const endpoint = `${url}/_api/web?$select=Title`;
+		return fetch(endpoint, {
+			method: 'GET',
+			headers: {
+				'Accept': 'application/json;odata=verbose'
+			}
+		})
+			.then(response => {
+				if (!response.ok) {
+					throw new Error('Network response was not ok ' + response.statusText);
+				}
+				return response.json();
+			})
+			.then(data => {
+				return data.d.Title;
+			})
+			.catch(error => {
+				console.error('There was a problem with the fetch operation:', error);
+				throw error;
+			});
+	}
+	self.getTitlesForMultipleUrls = function (urls) {
+		const promises = urls.map(url => self.getSharePointWebTitle(url));
+		return Promise.all(promises)
+			.then(titles => {
+				return urls.map((url, index) => ({ url, title: titles[index] }));
+			})
+			.catch(error => {
+				console.error('Error fetching titles:', error);
+			});
+	}
+}
