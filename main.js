@@ -35,8 +35,13 @@ function setHeaderHeight() {
     if (!heightIsSet) {
         window.setTimeout(() => {
             console.log("HEADER READY!");
-            const height = getHeaderHeight();
+            let height = getHeaderHeight();
             if (height !== null) {
+                height = height - 110;
+                $(".header-section.wow.fadeIn", $("#header").contents()).css(
+                    "padding-top",
+                    "0px"
+                );
                 heightIsSet = true;
                 console.log("HEADER HEIGHT: " + height);
                 $("#header").css("height", height + "px");
@@ -51,10 +56,7 @@ function setHeaderHeight() {
 }
 
 function getHeaderHeight() {
-    const height = $(
-        ".inner-page-title",
-        $("#header").contents()
-    )[0]
+    const height = $(".inner-page-title", $("#header").contents())[0]
         ? $(".inner-page-title", $("#header").contents()).outerHeight(true)
         : null;
 

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Landsat Explorer | GeoSA</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <style>
+            iframe {
+                width: 100%;
+                height: calc(100% - 30px);
+                border: 0px;
+                top: 30px;
+                position: absolute;
+            }
+            body,
+            html {
+                margin: 0px;
+                padding: 0px;
+                height: 100%;
+                overflow: hidden;
+                background-color: #00232e;
+            }
+            #cover {
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                padding: 10px 10px 10px 17px;
+                height: 65px;
+                background-color: #00232e;
+                z-index: 1;
+            }
+            #cover img {
+                height: 100%;
+            }
+            #shadow {
+                position: absolute;
+                background: red;
+                top: 31px;
+                left: 0px;
+                width: 384px;
+                height: 54px;
+                box-shadow: 0px 0px 7px 2px black;
+                z-index: 0;
+            }
+            #wideshadow {
+                position: absolute;
+                top: 0px;
+                left: 384px;
+                right: 0px;
+                height: 30px;
+                box-shadow: 0px 0px 7px 2px black;
+            }
+        </style>
+        <script>
+            const enteredPass = window.prompt("Please enter password");
+            let correctPass = "esri";
+            correctPass += (new Date().getMonth() + 1)
+                .toString()
+                .padStart(2, "0");
+        </script>
+    </head>
+    <body>
+        <iframe
+            id="container"
+        ></iframe>
+        <div id="cover">
+            <img src="./GeoSA-Ar_files/footer-logo.svg" />
+            <img src="./GeoSA-Ar_files/nd_wbg.png" style="margin-left: 10px" />
+        </div>
+        <div id="shadow"></div>
+        <div id="wideshadow"></div>
+        <script>
+            if (enteredPass === correctPass) {
+                document.getElementById("container").src =
+                    "https://livingatlas.arcgis.com/landsatexplorer";
+            }
+        </script>
+    </body>
+</html>
