@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Landsat Explorer | GeoSA</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/light/main.css">
+        <script src="https://js.arcgis.com/4.30/"></script>
+        <script src="landsat.js"></script>
         <style>
             iframe {
                 width: 100%;
@@ -52,17 +55,11 @@
                 box-shadow: 0px 0px 7px 2px black;
             }
         </style>
-        <script>
-            const enteredPass = window.prompt("Please enter password");
-            let correctPass = "esri";
-            correctPass += (new Date().getMonth() + 1)
-                .toString()
-                .padStart(2, "0");
-        </script>
     </head>
     <body>
         <iframe
             id="container"
+            src="landsatloading.html"
         ></iframe>
         <div id="cover">
             <img src="./GeoSA-Ar_files/footer-logo.svg" />
@@ -70,11 +67,5 @@
         </div>
         <div id="shadow"></div>
         <div id="wideshadow"></div>
-        <script>
-            if (enteredPass === correctPass) {
-                document.getElementById("container").src =
-                    "https://livingatlas.arcgis.com/landsatexplorer";
-            }
-        </script>
     </body>
 </html>
